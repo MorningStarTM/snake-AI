@@ -15,6 +15,8 @@ class Agent:
         self.epsilon = 0
         self.gamma = 0
         self.memory = deque(maxlen=MAX_MEM)
+        self.model = None
+        self.trainer = None
         # TODO: model , trainer
 
     def get_state(self, game):
@@ -70,7 +72,7 @@ class Agent:
         pass
 
     def train_short_memory(self, state, action, reward, next_state, done):
-        pass
+        self.trainer.train_step(state, action, reward, next_state, done)
 
     def get_action(self, state):
         pass
