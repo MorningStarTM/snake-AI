@@ -1,1 +1,1 @@
-from .snakeAI import SnakeGameAI
+from .snakeAI import SnakeGameAI, Direction, Point
